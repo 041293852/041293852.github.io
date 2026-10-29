@@ -1,0 +1,265 @@
+/* Base colours and a centered page matching the supplied 1024px mockup. */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #252525;
+    color: #252525;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.site-wrapper {
+    max-width: 1024px;
+    margin: 0 auto 16px;
+    background-color: #fff4e7;
+}
+
+/* The heading overlays an actual image element, as required. */
+.site-header {
+    position: relative;
+}
+
+.site-header img {
+    display: block;
+    width: 100%;
+    height: 341px;
+    object-fit: cover;
+}
+
+.site-header h1 {
+    position: absolute;
+    top: 56%;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    color: #fff;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 1.15;
+    text-align: center;
+    text-shadow: 0 2px 12px #000;
+}
+
+/* Three equal navigation columns with separators. */
+.main-nav ul {
+    display: flex;
+    margin: 2px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-nav li {
+    width: 33.333%;
+    text-align: center;
+}
+
+.main-nav li + li {
+    border-left: 1px solid #555;
+}
+
+.main-nav a {
+    display: block;
+    padding: 6px 0;
+    color: inherit;
+    font-size: 27px;
+    line-height: 1.25;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible {
+    background-color: #e8b88c;
+}
+
+/* Article text wraps alongside the image, then beneath it. */
+main {
+    padding: 0 10px;
+}
+
+.story {
+    display: flow-root;
+    margin-top: 32px;
+}
+
+h2 {
+    margin: 0 0 15px;
+    font-size: 29px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.story h2 {
+    font-size: 35px;
+}
+
+.story-image {
+    float: left;
+    width: 250px;
+    max-width: 45%;
+    height: auto;
+    margin: 0 20px 15px 0;
+}
+
+.story p {
+    margin: 0 0 12px;
+    line-height: 1.4;
+}
+
+.facts {
+    margin-top: 26px;
+}
+
+.facts h2 {
+    margin-bottom: 12px;
+}
+
+.facts ul {
+    margin: 0;
+    padding-left: 15px;
+    line-height: 1.4;
+}
+
+.contact {
+    margin-top: 25px;
+}
+
+.contact h2 {
+    margin-bottom: 12px;
+}
+
+/* Every control has an associated label; the radio group has a legend. */
+form {
+    border: 1px solid #000;
+    padding: 32px 16px 16px;
+}
+
+.form-field {
+    margin-bottom: 17px;
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 18px;
+}
+
+.form-field input,
+textarea {
+    display: block;
+    width: 100%;
+    border: 1px solid #bbb;
+    border-radius: 0;
+    background-color: #fff;
+    color: #252525;
+    font: inherit;
+}
+
+.form-field input {
+    height: 31px;
+    padding: 4px 6px;
+}
+
+textarea {
+    height: 100px;
+    padding: 6px;
+    resize: vertical;
+}
+
+fieldset {
+    min-width: 0;
+    margin: 19px 0 15px;
+    padding: 0;
+    border: 0;
+}
+
+legend {
+    margin-bottom: 26px;
+    padding: 0;
+    font-size: 22px;
+}
+
+.radio-options {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 18px;
+}
+
+.radio-options input {
+    margin: 0 1px 0 0;
+}
+
+button {
+    padding: 12px 11px;
+    border: 1px solid #000;
+    background-color: transparent;
+    color: #252525;
+    font-size: 11px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+button:hover,
+button:focus-visible {
+    background-color: #e8b88c;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #a2470a;
+    outline-offset: 2px;
+}
+
+footer {
+    padding: 33px 32px 34px;
+    text-align: right;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Keep the same design usable on narrower phone screens. */
+@media (max-width: 600px) {
+    .site-header img {
+        height: 220px;
+    }
+
+    .site-header h1 {
+        font-size: clamp(28px, 7vw, 44px);
+    }
+
+    .main-nav a {
+        font-size: 20px;
+    }
+
+    .story {
+        margin-top: 24px;
+    }
+
+    .story h2 {
+        font-size: 30px;
+    }
+
+    .story-image {
+        margin-right: 12px;
+    }
+
+    .facts ul {
+        line-height: 1.35;
+    }
+
+    form {
+        padding: 20px 12px 16px;
+    }
+
+    legend {
+        font-size: 20px;
+    }
+}

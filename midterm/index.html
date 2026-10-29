@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life on the Court</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="site-wrapper" id="home">
+        <!-- Header image stays in the HTML; the title is positioned over it. -->
+        <header class="site-header">
+            <img src="images/basketball-court.jpg" alt="A basketball resting on an outdoor court in warm afternoon light" width="1536" height="512">
+            <h1>Life on the Court</h1>
+        </header>
+
+        <!-- All navigation links lead to sections on this single page. -->
+        <nav class="main-nav" aria-label="Main navigation">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#story">Story</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <!-- The floated article image allows the paragraph to wrap around it. -->
+            <article class="story" id="story">
+                <h2>More Than a Game</h2>
+                <img class="story-image" src="images/basketball.jpg" alt="An orange basketball on a textured outdoor court" width="250" height="250">
+                <p>Basketball is one of my favourite ways to spend time outside. A ball, a hoop and a little space are enough to start practising. Some days are about shooting around on my own. Other days, a casual game is a chance to meet up with people and enjoy being on the court. There is always something to work on, whether it is controlling a dribble, finding a teammate or getting more comfortable with a shot.</p>
+                <p>A good session does not have to be complicated. Starting close to the basket helps build a steady shooting motion before moving farther away. Practising with both hands makes dribbling feel more natural. Passing and moving into open space can make a game flow better than trying to do everything alone. Small improvements add up when you keep coming back and paying attention to the basics.</p>
+                <p>What I like about an outdoor court is how different each visit can feel. The light changes, new people arrive and a quiet practice can turn into a friendly game. You do not have to be the best player to take part. Being willing to learn, share the ball and respect the people around you makes the experience better for everyone.</p>
+                <p>This page brings together the parts of basketball I enjoy: being active, getting outside and making time for a game. Whether you are just learning or already have a regular court, there is room to try something new. Grab a ball, find a safe place to play and enjoy the next shot.</p>
+
+            </article>
+
+            <!-- Facts are an unordered list rather than manually typed bullets. -->
+            <section class="facts" aria-labelledby="facts-heading">
+                <h2 id="facts-heading">Basketball Basics</h2>
+                <ul>
+                    <li>Dribbling moves the ball while you travel around the court.</li>
+                    <li>Passing helps teammates create space and find open shots.</li>
+                    <li>A balanced stance can help you stay ready on defence.</li>
+                    <li>Good sportsmanship means respecting teammates, opponents and the court.</li>
+                </ul>
+            </section>
+
+            <section class="contact" id="contact" aria-labelledby="contact-heading">
+                <h2 id="contact-heading">Let’s Talk Basketball</h2>
+                <!-- Classroom form layout: no message-delivery service is connected. -->
+                <form action="#contact" method="get">
+                    <div class="form-field">
+                        <label for="your-name">Your Name</label>
+                        <input type="text" id="your-name" name="name" autocomplete="name">
+                    </div>
+                    <div class="form-field">
+                        <label for="your-email">Your Email</label>
+                        <input type="email" id="your-email" name="email" autocomplete="email">
+                    </div>
+                    <div class="form-field message-field">
+                        <label for="your-message">Your Message</label>
+                        <textarea id="your-message" name="message"></textarea>
+                    </div>
+                    <fieldset>
+                        <legend>Would you join a pickup game?</legend>
+                        <div class="radio-options">
+                            <label for="visit-yes">Yes</label>
+                            <input type="radio" id="visit-yes" name="visit" value="yes">
+                            <label for="visit-no">No</label>
+                            <input type="radio" id="visit-no" name="visit" value="no">
+                            <label for="visit-maybe">Maybe</label>
+                            <input type="radio" id="visit-maybe" name="visit" value="maybe">
+                        </div>
+                    </fieldset>
+                    <button type="submit">Send</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Marcus Morgan | Life on the Court.</p>
+        </footer>
+    </div>
+</body>
+</html>
